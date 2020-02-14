@@ -3,25 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/styles.css"> 
     <title>Fast Food Revenge</title>
 </head>
 <body>
     <div class="container">
-        <form id="myForm" role="myForm">
-            <div>
-                <label for="restaurant">Restaurant</label>
-                <input class="restaurant" placeholder="Where did you eat?" value="">
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">Where did you eat?</button>
+            <div id="myDropdown" class="dropdown-content">
+              <a href="#">Wendy's</a>
+              <a href="#">McDonald's</a>
+              <a href="#">Burger King</a>
             </div>
-            <div>
-                <label for="item">Item</label>
-                <input class="items"placeholder="What did you eat?" value="">
-            </div>
-            <div>
-                <label for="calories"></label>
-            </div>
-        </form>
+        </div>    
     </div>   
 </body>
+<script>
+    /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+    
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropbtn')) {
+        const dropdowns = document.getElementsByClassName("dropdown-content");
+        let i;
+        for (i = 0; i < dropdowns.length; i++) {
+          const openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+</script>
+
 <script src="js/get.js"></script>
 <script src="js/scripts.js"></script>
 
