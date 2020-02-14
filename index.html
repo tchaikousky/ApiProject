@@ -4,8 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    
+    <div class="container">
+        <form id="myForm" role="myForm">
+            <div>
+                <label for="restaurant">Restaurant</label>
+                <input class="restaurant" placeholder="Where did you eat?" value="">
+            </div>
+            <div>
+                <label for="item">Item</label>
+                <input class="items"placeholder="What did you eat?" value="">
+            </div>
+            <div>
+                <label for="calories"></label>
+                <input class="calories" placeholder="Your meal was x calories." value="">
+            </div>
+        </form>
+    </div>
+    <div class="tempList" id="myList">
+
+    </div>
 </body>
+<script src="js/get.js"></script>
+<script src="js/scripts.js"></script>
 </html>

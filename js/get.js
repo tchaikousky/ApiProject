@@ -1,4 +1,4 @@
-`use strick`;
+`use strict`;
 
 function get(url) {
     return fetch(url)
@@ -9,7 +9,7 @@ function get(url) {
         return data;
     })
     .catch(function(error) {
-        return error;
+        return error; 
     });
 }
 
