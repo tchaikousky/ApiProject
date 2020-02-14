@@ -1,38 +1,81 @@
-.dropbtn {
-    background-color: rgb(18, 147, 18);
+
+html {
+    font-size: 24px;
     color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .dropbtn:hover, .dropbtn:focus {
-    background-color: #2980B9;
-  }
-  
-  .dropdown {
+    
+}
+
+h1 {
+    background-color: black;
+    border-radius: 8px;
+}
+
+h5 {
+    background-color: black;
+    border-radius: 8px;
+    padding: 2px;
+}
+#mainBox {
     position: relative;
+    text-align: center;
+    top: 30%;
+    left: 30%;
+    width: 500px;
+    height: 600px;
+    border: black 2px solid;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+#logos {
+    width: 100px;
+    height: 90px;
+    /* position: relative; */
     display: inline-block;
-  }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    overflow: auto;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-  
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  .dropdown a:hover {background-color: #ddd;}
-  
-  .show {display: block;}
+    align-items: center;
+    justify-content: center;
+    /* padding: 8px; */
+    border: white 3px solid;
+    border-radius: 5px;
+    padding: 3px;
+}
+
+#weightInput {
+    width: 300px;
+    height: 40px;
+    text-align: center;
+    font-size: 24px;
+    padding: 2px;
+    border: blue 1px solid;
+    border-radius: 5px;
+}
+
+#imgBg {
+    min-height: 100%;
+    min-width: 1024px;
+      
+    /* Set up proportionate scaling */
+    width: 100%;
+    height: auto;
+      
+    /* Set up positioning */
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+h1 {
+    position: relative;
+
+    /* margin-left: 50px; */
+    font-size: 34px; }
+
+
+#checkBoxes {
+    align-items: center;
+    justify-content: center;
+}
+
+.checkBox {
+    background-color: blue;
+    border: solid black 3px;
+}
