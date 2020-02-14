@@ -1,34 +1,50 @@
 `use scrict`;
 
-const apiKey = `f218c55bc041494885c415afbc00faaa`
+const apiKey = `f218c55bc041494885c415afbc00faaa`;
+//TBD -- list of restaurants we support
+const restaurants = [];
 
-function getRestaurants() {
-    let restuarantName = `Hooters`;
-    
-    
-
-    
-
+function getRestaurant(restaurantName) {
+   restaurants.forEach(restaurant => {
+       if(restaurant.name === restaurantName) {
+           return restaurant;
+       }
+   });   
 }
 
-function getMenuItem(menuItem) {
-    const apiUrl = `https://api.spoonacular.com/food/menuItems/search?query=Hooters&number=60&apiKey=f218c55bc041494885c415afbc00faaa`;
-    
+function getMenuItems() {
+    const apiUrl = `https://api.spoonacular.com/food/menuItems/search?query=Hooters&number=60&apiKey=${apiKey}`;
+    const restaurantMenuList = [];
+
     get(apiUrl).then(function(response) {
-        const restaurantMenuList = response.menuItems.filter(function(menuItem) {
-            console.log(response.menuItems[0].restaurantChain)
+        response.menuItems.filter(function(menuItem) {
             if(menuItem.restaurantChain === "Hooters") {
-                return menuItem
+                restaurantMenuList.push({id: menuItem.id, title: menuItem.title, imgage: menuItem.image});    
             }
         });
-        console.log(restaurantMenuList);
-        // console.log(restaurantList);
-        // console.log(response.value);
     });
+    return restaurantMenuList;
 }
 
+function getNutritionInfo(menuItemId) {
+    const apiUrl = `https://api.spoonacular.com/food/menuItems/${menuItemId}?query=nutrition&apiKey=${apiKey}`;
+    const nutritionInfo = [];
+    
+    get(apiUrl).then(function(response) {
+        nutritionInfo.push({calories: response.nutrition.calories, fat: response.nutrition.fat, protein: response.nutrition.protein, carbs: response.nutrition.carbs});
+    });
+    return nutritionInfo;
+}
 
-getMenuItem();
+function getSingleMenuItem(itemName) {
+    const menuItemId = 0;
+    restaurantMenu.forEach(menuItem => {
+        if(menuItem.title === itemName) {
+            menuItemId = menuItem.id;
+        }
+    });
+    return menuItemId;
+}
 
-
-// /search?query=${restuarantName}&number=60&apiKey=${apiKey}
+console.log(getMenuItems());
+console.log(getNutritionInfo(419330));
