@@ -1,0 +1,411 @@
+{
+    "type": "menuItem",
+    "menuItems": [
+        {
+            "id": 292470,
+            "title": "Caesar Salad",
+            "restaurantChain": "Hooters",
+            "servingSize": null,
+            "readableServingSize": null,
+            "image": "https://images.spoonacular.com/file/wximages/292470-312x231.jpg",
+            "imageType": "jpg"
+        },
+        {
+            "id": 419344,
+            "title": "Breaded Wings",
+            "restaurantChain": "Hooters",
+            "servingSize": "20 piece",
+            "readableServingSize": "20 piece",
+            "image": "https://images.spoonacular.com/file/wximages/419344-312x231.jpg",
+            "imageType": "jpg"
+        },
+        {
+            "id": 419345,
+            "title": "Breaded Wings",
+            "restaurantChain": "Hooters",
+            "servingSize": "50 piece",
+            "readableServingSize": "50 piece",
+            "image": "https://images.spoonacular.com/file/wximages/419345-312x231.jpg",
+            "imageType": "jpg"
+        },
+        {
+            "id": 419343,
+            "title": "Breaded Wings",
+            "restaurantChain": "Hooters",
+            "servingSize": "15 piece",
+            "readableServingSize": "15 piece",
+            "image": "https://images.spoonacular.com/file/wximages/419343-312x231.jpg",
+            "imageType": "jpg"
+        },
+        {
+            "id": 419342,
+            "title": "Breaded Wings",
+            "restaurantChain": "Hooters",
+            "servingSize": "10 piece",
+            "readableServingSize": "10 piece",
+            "image": "https://images.spoonacular.com/file/wximages/419342-312x231.jpg",
+            "imageType": "jpg"
+        },
+        {
+            "id": 419346,
+            "title": "Breaded Wings",
+            "restaurantChain": "Hooters",
+            "servingSize": "6 piece",
+            "readableServingSize": "6 piece",
+            "image": "https://images.spoonacular.com/file/wximages/419346-312x231.jpg",
+            "imageType": "jpg"
+        },
+        {
+            "id": 419337,
+            "title": "Boneless Wings",
+            "restaurantChain": "Hooters",
+            "servingSize": "15 piece",
+            "readableServingSize": "15 piece",
+            "image": "https://images.spoonacular.com/file/wximages/419337-312x231.png",
+            "imageType": "png"
+        },
+        {
+            "id": 419340,
+            "title": "Boneless Wings",
+            "restaurantChain": "Hooters",
+            "servingSize": "6 piece",
+            "readableServingSize": "6 piece",
+            "image": "https://images.spoonacular.com/file/wximages/419340-312x231.png",
+            "imageType": "png"
+        },
+        {
+            "id": 419339,
+            "title": "Boneless Wings",
+            "restaurantChain": "Hooters",
+            "servingSize": "50 piece",
+            "readableServingSize": "50 piece",
+            "image": "https://images.spoonacular.com/file/wximages/419339-312x231.png",
+            "imageType": "png"
+        },
+        {
+            "id": 419341,
+            "title": "Boneless Wings",
+            "restaurantChain": "Hooters",
+            "servingSize": "10 piece",
+            "readableServingSize": "10 piece",
+            "image": "https://images.spoonacular.com/file/wximages/419341-312x231.png",
+            "imageType": "png"
+        },
+        {
+            "id": 419338,
+            "title": "Boneless Wings",
+            "restaurantChain": "Hooters",
+            "servingSize": "20 piece",
+            "readableServingSize": "20 piece",
+            "image": "https://images.spoonacular.com/file/wximages/419338-312x231.png",
+            "imageType": "png"
+        },
+        {
+            "id": 419324,
+            "title": "Chicken Taco Salad",
+            "restaurantChain": "Hooters",
+            "servingSize": null,
+            "readableServingSize": null,
+            "image": "https://images.spoonacular.com/file/wximages/419324-312x231.jpg",
+            "imageType": "jpg"
+        },
+        {
+            "id": 419350,
+            "title": "Buffalo Chicken Salad",
+            "restaurantChain": "Hooters",
+            "servingSize": null,
+            "readableServingSize": null,
+            "image": "https://images.spoonacular.com/file/wximages/419350-312x231.jpg",
+            "imageType": "jpg"
+        },
+        {
+            "id": 419349,
+            "title": "Buffalo Chicken Quesadilla",
+            "restaurantChain": "Hooters",
+            "servingSize": null,
+            "readableServingSize": null,
+            "image": "https://images.spoonacular.com/file/wximages/419349-312x231.png",
+            "imageType": "png"
+        },
+        {
+            "id": 419360,
+            "title": "Chicken Garden Salad",
+            "restaurantChain": "Hooters",
+            "servingSize": null,
+            "readableServingSize": null,
+            "image": "https://images.spoonacular.com/file/wximages/419360-312x231.jpg",
+            "imageType": "jpg"
+        },
+        {
+            "id": 419325,
+            "title": "Wings",
+            "restaurantChain": "Hooters",
+            "servingSize": "20 piece",
+            "readableServingSize": "20 piece",
+            "image": "https://images.spoonacular.com/file/wximages/419325-312x231.jpg",
+            "imageType": "jpg"
+        },
+        {
+            "id": 419326,
+            "title": "Wings",
+            "restaurantChain": "Hooters",
+            "servingSize": "50 piece",
+            "readableServingSize": "50 piece",
+            "image": "https://images.spoonacular.com/file/wximages/419326-312x231.jpg",
+            "imageType": "jpg"
+        },
+        {
+            "id": 419327,
+            "title": "Wings",
+            "restaurantChain": "Hooters",
+            "servingSize": "6 piece",
+            "readableServingSize": "6 piece",
+            "image": "https://images.spoonacular.com/file/wximages/419327-312x231.jpg",
+            "imageType": "jpg"
+        },
+        {
+            "id": 419361,
+            "title": "Wings",
+            "restaurantChain": "Hooters",
+            "servingSize": "15 piece",
+            "readableServingSize": "15 piece",
+            "image": "https://images.spoonacular.com/file/wximages/419361-312x231.jpg",
+            "imageType": "jpg"
+        },
+        {
+            "id": 419362,
+            "title": "Wings",
+            "restaurantChain": "Hooters",
+            "servingSize": "10 piece",
+            "readableServingSize": "10 piece",
+            "image": "https://images.spoonacular.com/file/wximages/419362-312x231.jpg",
+            "imageType": "jpg"
+        },
+        {
+            "id": 419319,
+            "title": "Bacon Wrapped Wings",
+            "restaurantChain": "Hooters",
+            "servingSize": "15 piece",
+            "readableServingSize": "15 piece",
+            "image": "https://images.spoonacular.com/file/wximages/419319-312x231.png",
+            "imageType": "png"
+        },
+        {
+            "id": 419323,
+            "title": "Baja Fish Tacos - Fried",
+            "restaurantChain": "Hooters",
+            "servingSize": null,
+            "readableServingSize": null,
+            "image": "https://images.spoonacular.com/file/wximages/419323-312x231.png",
+            "imageType": "png"
+        },
+        {
+            "id": 419329,
+            "title": "Baja Fish Tacos - Grilled",
+            "restaurantChain": "Hooters",
+            "servingSize": null,
+            "readableServingSize": null,
+            "image": "https://images.spoonacular.com/file/wximages/419329-312x231.png",
+            "imageType": "png"
+        },
+        {
+            "id": 419353,
+            "title": "Buffalo Chicken Tacos",
+            "restaurantChain": "Hooters",
+            "servingSize": null,
+            "readableServingSize": null,
+            "image": "https://images.spoonacular.com/file/wximages/419353-312x231.jpg",
+            "imageType": "jpg"
+        },
+        {
+            "id": 419318,
+            "title": "Bacon Wrapped Wings",
+            "restaurantChain": "Hooters",
+            "servingSize": "10 piece",
+            "readableServingSize": "10 piece",
+            "image": "https://images.spoonacular.com/file/wximages/419318-312x231.png",
+            "imageType": "png"
+        },
+        {
+            "id": 419320,
+            "title": "Bacon Wrapped Wings",
+            "restaurantChain": "Hooters",
+            "servingSize": "20 piece",
+            "readableServingSize": "20 piece",
+            "image": "https://images.spoonacular.com/file/wximages/419320-312x231.png",
+            "imageType": "png"
+        },
+        {
+            "id": 419322,
+            "title": "Bacon Wrapped Wings",
+            "restaurantChain": "Hooters",
+            "servingSize": "6 piece",
+            "readableServingSize": "6 piece",
+            "image": "https://images.spoonacular.com/file/wximages/419322-312x231.png",
+            "imageType": "png"
+        },
+        {
+            "id": 419321,
+            "title": "Bacon Wrapped Wings",
+            "restaurantChain": "Hooters",
+            "servingSize": "50 piece",
+            "readableServingSize": "50 piece",
+            "image": "https://images.spoonacular.com/file/wximages/419321-312x231.png",
+            "imageType": "png"
+        },
+        {
+            "id": 419351,
+            "title": "Buffalo Chicken Sandwich",
+            "restaurantChain": "Hooters",
+            "servingSize": null,
+            "readableServingSize": null,
+            "image": "https://images.spoonacular.com/file/wximages/419351-312x231.jpg",
+            "imageType": "jpg"
+        },
+        {
+            "id": 419357,
+            "title": "Burger Sliders",
+            "restaurantChain": "Hooters",
+            "servingSize": null,
+            "readableServingSize": null,
+            "image": "https://images.spoonacular.com/file/wximages/419357-312x231.png",
+            "imageType": "png"
+        },
+        {
+            "id": 419334,
+            "title": "Blackened Mahi Sandwich",
+            "restaurantChain": "Hooters",
+            "servingSize": null,
+            "readableServingSize": null,
+            "image": "https://images.spoonacular.com/file/wximages/419334-312x231.png",
+            "imageType": "png"
+        },
+        {
+            "id": 419347,
+            "title": "Buffalo Chicken Sliders",
+            "restaurantChain": "Hooters",
+            "servingSize": null,
+            "readableServingSize": null,
+            "image": "https://images.spoonacular.com/file/wximages/419347-312x231.png",
+            "imageType": "png"
+        },
+        {
+            "id": 419332,
+            "title": "Big Dipper Fries",
+            "restaurantChain": "Hooters",
+            "servingSize": null,
+            "readableServingSize": null,
+            "image": "https://images.spoonacular.com/file/wximages/419332-312x231.png",
+            "imageType": "png"
+        },
+        {
+            "id": 419352,
+            "title": "Buffalo Chicken Strips",
+            "restaurantChain": "Hooters",
+            "servingSize": null,
+            "readableServingSize": null,
+            "image": "https://images.spoonacular.com/file/wximages/419352-312x231.png",
+            "imageType": "png"
+        },
+        {
+            "id": 419356,
+            "title": "Buffalo Shrimp",
+            "restaurantChain": "Hooters",
+            "servingSize": "24 piece",
+            "readableServingSize": "24 piece",
+            "image": "https://images.spoonacular.com/file/wximages/419356-312x231.png",
+            "imageType": "png"
+        },
+        {
+            "id": 419355,
+            "title": "Buffalo Shrimp",
+            "restaurantChain": "Hooters",
+            "servingSize": "12 piece",
+            "readableServingSize": "12 piece",
+            "image": "https://images.spoonacular.com/file/wximages/419355-312x231.png",
+            "imageType": "png"
+        },
+        {
+            "id": 419359,
+            "title": "Chicken Caesar Salad",
+            "restaurantChain": "Hooters",
+            "servingSize": null,
+            "readableServingSize": null,
+            "image": "https://spoonacular.com/menuItemImages/caesar-salad.png",
+            "imageType": "png"
+        },
+        {
+            "id": 419335,
+            "title": "Blackened Shrimp Tacos",
+            "restaurantChain": "Hooters",
+            "servingSize": null,
+            "readableServingSize": null,
+            "image": "https://spoonacular.com/menuItemImages/taco-isolated.jpg",
+            "imageType": "jpg"
+        },
+        {
+            "id": 419330,
+            "title": "BBQ Pork Sandwich",
+            "restaurantChain": "Hooters",
+            "servingSize": null,
+            "readableServingSize": null,
+            "image": "https://spoonacular.com/menuItemImages/sandwich.jpg",
+            "imageType": "jpg"
+        },
+        {
+            "id": 419333,
+            "title": "Big Fish Sandwich - Fried",
+            "restaurantChain": "Hooters",
+            "servingSize": null,
+            "readableServingSize": null,
+            "image": "https://spoonacular.com/menuItemImages/fish-sandwich.jpg",
+            "imageType": "jpg"
+        },
+        {
+            "id": 419328,
+            "title": "Baja Burger",
+            "restaurantChain": "Hooters",
+            "servingSize": null,
+            "readableServingSize": null,
+            "image": "https://spoonacular.com/menuItemImages/hamburger.jpg",
+            "imageType": "jpg"
+        },
+        {
+            "id": 419348,
+            "title": "Buffalo Chicken Dip",
+            "restaurantChain": "Hooters",
+            "servingSize": null,
+            "readableServingSize": null,
+            "image": "https://images.spoonacular.com/file/wximages/419348-312x231.png",
+            "imageType": "png"
+        },
+        {
+            "id": 302625,
+            "title": "Cheese Sticks",
+            "restaurantChain": "Hooters",
+            "servingSize": null,
+            "readableServingSize": null,
+            "image": "https://images.spoonacular.com/file/wximages/302625-312x231.jpg",
+            "imageType": "jpg"
+        },
+        {
+            "id": 271843,
+            "title": "Caramel Fudge Cheesecake",
+            "restaurantChain": "Hooters",
+            "servingSize": null,
+            "readableServingSize": null,
+            "image": "https://spoonacular.com/menuItemImages/caramel-chocolate-cake.jpg",
+            "imageType": "jpg"
+        },
+        {
+            "id": 419354,
+            "title": "Buffalo Platter",
+            "restaurantChain": "Hooters",
+            "servingSize": null,
+            "readableServingSize": null,
+            "image": "https://images.spoonacular.com/file/wximages/419354-312x231.jpg",
+            "imageType": "jpg"
+        }
+    ]
+    
+}

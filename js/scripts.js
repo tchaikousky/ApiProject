@@ -2,7 +2,7 @@
 
 const apiKey = `f218c55bc041494885c415afbc00faaa`;
 //TBD -- list of restaurants we support
-const restaurants = [];
+const 
 
 function getRestaurant(restaurantName) {
    restaurants.forEach(restaurant => {
@@ -15,6 +15,7 @@ function getRestaurant(restaurantName) {
 function getMenuItems(restaurantName) {
     const apiUrl = `https://api.spoonacular.com/food/menuItems/search?query=${restaurantName}&number=150&apiKey=${apiKey}`;
     const restaurantMenuList = [];
+    const uniqueMenuList = [];
 
     get(apiUrl).then(function(response) {
         response.menuItems.filter(function(menuItem) {
@@ -22,9 +23,19 @@ function getMenuItems(restaurantName) {
                 restaurantMenuList.push({id: menuItem.id, name: menuItem.restaurantChain, title: menuItem.title, image: menuItem.image});    
             };
         });
-    });
-    return restaurantMenuList;
+
+        restaurantMenuList.forEach(element => {
+            uniqueMenuList.push(element);
+            if(uniqueMenuList.length > 1) {
+                if(uniqueMenuList[uniqueMenuList.length -1].title === uniqueMenuList[uniqueMenuList.length -2].title) {
+                    uniqueMenuList.pop();
+                }
+            }
+        })      
+    });    
+    return uniqueMenuList;
 }
+
 
 function getNutritionInfo(menuItemId) {
     const apiUrl = `https://api.spoonacular.com/food/menuItems/${menuItemId}?query=nutrition&apiKey=${apiKey}`;
@@ -38,56 +49,58 @@ function getNutritionInfo(menuItemId) {
 
 function getCaloriesBurned(duration, weight, exercise) {
     weight = convertLbToKg(weight);
-    let secondNum = (exercise.name[1]*3.5*weight)/200;   
-    console.log(duration * secondNum);
+    let secondNum = (exercise.activity[1]*3.5*weight)/200;   
 
+    return duration * secondNum;
 }
 
 function getTimeToBurnCalories(calories, weight, exercise) {
     weight = convertLbToKg(weight);
-    let secondNum = (exercise.name[1]*3.5*weight)/200;
+    let secondNum = (exercise.activity[1]*3.5*weight)/200;
     let time = calories / secondNum;
 
-    return time;
-    
+    return time;   
 }
 
 function convertLbToKg(weightInPounds) {
-    const kilograms = weightInPounds * .453592;
+    const kilograms = .453592;
+    const convertedWeight = weightInPounds * kilograms;
 
-    return kilograms;
+    return convertedWeight;
 }
 
 function getActivity(exercise) {
     let activity = "unavailable";
     const activities = [
-        {name: ["casual walking", 2]},
-        {name: ["house cleaning", 3]},
-        {name: ["moderate walking", 3.3]},
-        {name: ["stair climbing", 4]},
-        {name: ["casual bicycling", 4]},
-        {name: ["dancing", 4.8]},
-        {name: ["strenuous hiking", 6.5]},
-        {name: ["kayaking", 6.5]},
-        {name: ["moderate bicycling", 13]},
-        {name: ["strenuous jogging", 11.2]},
-        {name: ["casual swimming", 8]},
-        {name: ["sexual activity", 5.8]},
-        {name: ["playing basketball", 8]},
-        {name: ["moderate jogging", 8.8]},
+        {activity: ["casual walking", 2]},
+        {activity: ["house cleaning", 3]},
+        {activity: ["moderate walking", 3.3]},
+        {activity: ["stair climbing", 4]},
+        {activity: ["casual bicycling", 4]},
+        {activity: ["dancing", 4.8]},
+        {activity: ["strenuous hiking", 6.5]},
+        {activity: ["kayaking", 6.5]},
+        {activity: ["moderate bicycling", 13]},
+        {activity: ["strenuous jogging", 11.2]},
+        {activity: ["casual swimming", 8]},
+        {activity: ["sexual activity", 5.8]},
+        {activity: ["playing basketball", 8]},
+        {activity: ["moderate jogging", 8.8]},
     ];
 
     activities.forEach(movement => {
-        if(movement.name[0] === exercise) {
+        if(movement.activity[0] === exercise) {
             activity = movement;
         }
     });
     return activity;
 }
 
+
+
 // console.log(getMenuItems("Bojangles"));
 // console.log(getNutritionInfo(419330));
-getCaloriesBurned(60, 215, getActivity("casual walking"));
+console.log(getCaloriesBurned(60, 215, getActivity("casual walking")));
 console.log(getActivity("house cleaning"));
 console.log(convertLbToKg(215));
 console.log(getTimeToBurnCalories(205, 215, getActivity("casual walking")));

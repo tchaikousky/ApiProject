@@ -7,26 +7,35 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <div class="container">
-        <form id="myForm" role="myForm">
-            <div>
-                <label for="restaurant">Restaurant</label>
-                <input class="restaurant" placeholder="Where did you eat?" value="">
-            </div>
-            <div>
-                <label for="item">Item</label>
-                <input class="items"placeholder="What did you eat?" value="">
-            </div>
-            <div>
-                <label for="calories"></label>
-                <input class="calories" placeholder="Your meal was x calories." value="">
-            </div>
-        </form>
-    </div>
-    <div class="tempList" id="myList">
+  <img src="images/working_out.jpg" id="imgBg"/>
+  <div id="mainBox">
+    <h1>Where did you eat?</h1>
+      <div>
+        <input id="logos" type="image" src="images/sonic.jpg"/>
+        <input id="logos"  type="image" src="images/burgerking.jpg"/>
+        <input id="logos"  type="image" src="images/mcdonalds.jpg"/><br>
+        <input id="logos"  type="image" src="images/wendys.jpg"/>
+        <input id="logos"  type="image" src="images/hooters.jpg"/>
+        <input id="logos"  type="image" src="images/jackinthebox.jpg"/>
+      </div> 
+    <div id="checkBoxes"> 
+      <div>
+        <h5>How intense would you like your exercise to be?</h2>
+        <input type="checkbox" class="checkBox" id="light" name="scales">
+        <label for="scales">Light</label>
+      </div>
+      <div>
+        <input type="checkbox" class="checkBox" id="moderate" name="horns">
+        <label for="horns">Moderate</label>
+      </div>
+      <div>
+        <input type="checkbox" class="checkBox" id="intense" name="horns">
+        <label for="horns">Intense</label>
+      </div><br>
+      <input type="text" id="weightInput" placeholder="Enter Weight">
+  </div>
 
-    </div>
 </body>
-<script src="js/get.js"></script>
-<script src="js/scripts.js"></script>
+<script src = "js/get.js"></script>
+<script src = "js/scripts.js"></script>
 </html>

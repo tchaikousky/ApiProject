@@ -1,0 +1,81 @@
+
+html {
+    font-size: 24px;
+    color: white;
+    
+}
+
+h1 {
+    background-color: black;
+    border-radius: 8px;
+}
+
+h5 {
+    background-color: black;
+    border-radius: 8px;
+    padding: 2px;
+}
+#mainBox {
+    position: relative;
+    text-align: center;
+    top: 30%;
+    left: 30%;
+    width: 500px;
+    height: 600px;
+    border: black 2px solid;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+#logos {
+    width: 100px;
+    height: 90px;
+    /* position: relative; */
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    /* padding: 8px; */
+    border: white 3px solid;
+    border-radius: 5px;
+    padding: 3px;
+}
+
+#weightInput {
+    width: 300px;
+    height: 40px;
+    text-align: center;
+    font-size: 24px;
+    padding: 2px;
+    border: blue 1px solid;
+    border-radius: 5px;
+}
+
+#imgBg {
+    min-height: 100%;
+    min-width: 1024px;
+      
+    /* Set up proportionate scaling */
+    width: 100%;
+    height: auto;
+      
+    /* Set up positioning */
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+h1 {
+    position: relative;
+
+    /* margin-left: 50px; */
+    font-size: 34px; }
+
+
+#checkBoxes {
+    align-items: center;
+    justify-content: center;
+}
+
+.checkBox {
+    background-color: blue;
+    border: solid black 3px;
+}
