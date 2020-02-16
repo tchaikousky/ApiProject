@@ -1,0 +1,17 @@
+casual walking: 2
+house cleaning: 3
+moderate walking: 3.3
+climbing stairs: 4
+casual bicycling: 4
+dancing: 4.8
+strenuous hiking: 6.5
+kayaking: 6.5
+moderate bicycling: 13
+strenuous jogging: 11.2
+casual swimming: 8
+sexual activity: 5.8
+basketball: 8
+moderate jogging: 8.8
+
+
+calories burned formula = duration(minutes) * (met*3.5*weight)/200
