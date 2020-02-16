@@ -1,9 +1,54 @@
 `use scrict`;
 
 const apiKey = `f218c55bc041494885c415afbc00faaa`;
-//TBD -- list of restaurants we support
-const 
+const btn = document.getElementById("myBtn");
+const closeModalButton = document.getElementsByClassName("close")[0];
+const logos = document.getElementById("logoButtons");
 
+btn.addEventListener("click", function(e) {
+    const modal = document.getElementById("myModal");
+    modal.style.display = "block";
+});
+
+closeModalButton.addEventListener("click", function(e) {
+    const modal = document.getElementById("myModal");
+    modal.style.display = "none";
+});
+
+logos.addEventListener("click", function(e){
+    
+    if (e.target.value != undefined) {
+        // if(e.target.value === "Burger King") {
+        //     location.replace("page2.html");
+        // }
+        // else if(e.target.value === "Carl's Jr") {
+        //     location.replace("page2.html");
+        // }
+        // else if(e.target.value === "Hooter's") {
+        //     location.replace("page2.html");
+        // }
+        // else if(e.target.value === "Jack In The Box") {
+        //     location.replace("page2.html");
+        // }
+        // else if(e.target.value === "Sonic") {
+        //     location.replace("page2.html");
+        // }
+        // else if(e.target.value === "Wendy's") {
+        //     location.replace("page2.html");
+        // }
+        // else if(e.target.value === "McDonald's") {
+        //     location.replace("page2.html");
+        // }
+        // else if(e.target.value === "Bojangles") {
+        //     location.replace("page2.html");
+        // }
+        console.log(getMenuItems(e.target.value));
+        // location.replace("page2.html");
+        
+    }
+    
+});
+        
 function getRestaurant(restaurantName) {
    restaurants.forEach(restaurant => {
        if(restaurant.name === restaurantName) {
@@ -16,7 +61,7 @@ function getMenuItems(restaurantName) {
     const apiUrl = `https://api.spoonacular.com/food/menuItems/search?query=${restaurantName}&number=150&apiKey=${apiKey}`;
     const restaurantMenuList = [];
     const uniqueMenuList = [];
-
+    
     get(apiUrl).then(function(response) {
         response.menuItems.filter(function(menuItem) {
             if(menuItem.restaurantChain === restaurantName) {
@@ -98,7 +143,7 @@ function getActivity(exercise) {
 
 
 
-// console.log(getMenuItems("Bojangles"));
+
 // console.log(getNutritionInfo(419330));
 console.log(getCaloriesBurned(60, 215, getActivity("casual walking")));
 console.log(getActivity("house cleaning"));

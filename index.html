@@ -1,41 +1,57 @@
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-  <img src="images/working_out.jpg" id="imgBg"/>
-  <div id="mainBox">
-    <h1>Where did you eat?</h1>
-      <div>
-        <input id="logos" type="image" src="images/sonic.jpg"/>
-        <input id="logos"  type="image" src="images/burgerking.jpg"/>
-        <input id="logos"  type="image" src="images/mcdonalds.jpg"/><br>
-        <input id="logos"  type="image" src="images/wendys.jpg"/>
-        <input id="logos"  type="image" src="images/hooters.jpg"/>
-        <input id="logos"  type="image" src="images/jackinthebox.jpg"/>
-      </div> 
-    <div id="checkBoxes"> 
-      <div>
-        <h5>How intense would you like your exercise to be?</h2>
-        <input type="checkbox" class="checkBox" id="light" name="scales">
-        <label for="scales">Light</label>
-      </div>
-      <div>
-        <input type="checkbox" class="checkBox" id="moderate" name="horns">
-        <label for="horns">Moderate</label>
-      </div>
-      <div>
-        <input type="checkbox" class="checkBox" id="intense" name="horns">
-        <label for="horns">Intense</label>
-      </div><br>
-      <input type="text" id="weightInput" placeholder="Enter Weight">
-  </div>
-
-</body>
-<script src = "js/get.js"></script>
-<script src = "js/scripts.js"></script>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exercise Generator</title>
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        <main>      
+            <div class="menuBox">
+                <img src="images/logo.png" id="logoTop"/>
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Contact</li>
+                </ul>
+            </div>  
+            <div class="heroBox">
+                <div id="smallHero">
+                    <span id="smallHeroHeader">Exercise Generator</span> <br>
+                    <span id="smallHeroP">Find the right exercise that will burn those useless fast-food calories!</span> 
+                </div>
+                <div id="bigHero">
+                    <span id="bigHeroHeader">Choose Your Workout</span><br>
+                    <select id="workoutSelector">
+                        <option id="lightWorkout">Light Workout</option>
+                        <option id="moderateWorkout">Moderate Workout</option>
+                        <option id="intenseWorkout">Intense Workout</option>
+                    </select><br>
+                    <span id="bigHeroHeader2">Enter Your Weight</span><br>
+                    <input type="text" id="weightInput" placeholder="Enter Lbs"><br>
+                    <span id="bigHeroHeader3">Where Did You Eat?</span><br>
+                    <button type="button" class="restSelector" id="myBtn">Select Restaurant</button><br>
+                    <div id="myModal" class="modal">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <div id="logoButtons">
+                                <input type="image" src="images/burgerking.jpg" class="logos" id="burgerKing" value="Burger King"> 
+                                <input type="image" src="images/calrsjr.jpg" class="logos" id="carlsJr" value="Carl's Jr"> 
+                                <input type="image" src="images/hooters.jpg" class="logos" id="hooters" value="Hooters">
+                                <input type="image" src="images/jackinthebox.jpg" class="logos" id="jackInTheBox" value="Jack in the Box">
+                                <input type="image" src="images/sonic.jpg" class="logos" id="sonic" value="Sonic">
+                                <input type="image" src="images/wendys.jpg" class="logos" id="wendys" value="Wendy's">
+                                <input type="image" src="images/mcdonalds.png" class="logos" id="mcdonalds" value="McDonald's">
+                                <input type="image" src="images/bojangles.png" class="logos" id="bojangles" value="Bojangles">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+    <script src = "js/get.js"></script>
+    <script src = "js/scripts.js"></script>
 </html>
