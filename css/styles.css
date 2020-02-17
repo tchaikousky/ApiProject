@@ -194,7 +194,10 @@ li {
 
 }
 
+@media screen and (max-width: 800px) {
 
+    
+  }
 
 /* ul {
     border: black 4px solid;
