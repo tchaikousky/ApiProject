@@ -2,11 +2,12 @@ html {
     font-size: 14px;
     color: white;
     /* background-color: yellow; */
-}   
+    background-image: ;
+}
 
 body {
     /* background-color: black; */
-    background-image: url("../images/abstr.jpg");
+    background-image: url("/images/abstr.jpg");
 }
 
 div {
@@ -184,6 +185,7 @@ li {
 .logos {
     width: 100px;
     height: 100px;
+    /* border: solid purple 3px; */
     border-radius: 4px;
     box-shadow: 2px 2px black, .50em 0 .2em grey;
 } 
@@ -197,6 +199,13 @@ li {
     
   }
 
+/* ul {
+    border: black 4px solid;
+    height: 55px;
+    width: auto;
+    float: right;
+
+}
 
 
 

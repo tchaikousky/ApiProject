@@ -3,6 +3,7 @@
 const apiKey = `f218c55bc041494885c415afbc00faaa`;
 const apiKey2 = `29a682eb66a84deba3ba0a5a29686c19`;
 const apiKey3 = `HMCo478fzi4fDwuGYUzgueKiWkkP1apcec2DE3qR`;
+const apiKey4 = `3d088638092c4eed99786c1484469e95`
 const target = document.cookie;
 const menu = document.getElementById("menuItems");
 const closeModalButton = document.getElementsByClassName("closeButton")[0];
@@ -32,7 +33,7 @@ modal.addEventListener("click", function(e) {
 });
 
 function getMenuItems(restaurantName) {
-    const apiUrl = `https://api.spoonacular.com/food/menuItems/search?query=${restaurantName}&number=150&apiKey=${apiKey2}`;
+    const apiUrl = `https://api.spoonacular.com/food/menuItems/search?query=${restaurantName}&number=150&apiKey=${apiKey4}`;
     const restaurantMenuList = [];
     const uniqueMenuList = [];
     const list = document.querySelector(`.menuItems-photogallery`);
@@ -72,7 +73,7 @@ function getMenuItems(restaurantName) {
 };
 
 function getNutritionInfo(menuItemId) {
-    const apiUrl = `https://api.spoonacular.com/food/menuItems/${menuItemId}?query=nutrition&apiKey=${apiKey2}`;
+    const apiUrl = `https://api.spoonacular.com/food/menuItems/${menuItemId}?query=nutrition&apiKey=${apiKey4}`;
     const nutritionInfo = [];
     const modalInput = document.getElementById("bodyOfModal");    
 

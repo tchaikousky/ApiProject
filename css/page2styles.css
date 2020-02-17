@@ -1,0 +1,334 @@
+html {
+    font-size: 14px;
+    color: white;
+    /* background-color: yellow; */
+}   
+
+body {
+    /* background-color: black; */
+    background-image: url("../images/abstr.jpg");
+}
+
+div {
+    /* border: dashed black 4px; */
+}
+
+main {
+height: 100%;
+width: 90%;
+margin: auto;
+display: grid;
+grid-template-columns: 1fr;
+grid-template-rows: 1fr 6fr 1fr 2fr;
+
+}
+
+.button {
+    background-color: coral;
+    padding: 1em 2em;
+    color: white;
+    border: 0;
+    position: absolute;
+    bottom: 670px;
+    left: 675px;
+}
+.button:hover {
+    background: black;
+}
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.modalContent {
+    background-color:rgba(245, 66, 93,.80);
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 5px solid grey;
+    width: 50%; /* Could be more or less, depending on screen size */
+    height: 50%;
+    border-radius: 10px;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
+    overflow: auto;
+    overflow-x: scroll;
+    animation-name: modalopen;
+    animation-duration: 1s;
+}
+.modal_header h3 .modalFooter h3{
+    margin: 0;
+}
+.modalHeader {
+    background-image: url("../images/abstr.jpg");
+    padding: 2px;
+    color: #fff;
+    text-align: center;
+}
+.modalBody {
+    padding: 10px 20px;
+}
+.modalBody p {
+    text-align: center;
+}
+/* .modalFooter {
+    background: coral;
+    padding: 2px;
+    color: white;
+    text-align: center;
+} */
+.closeButton {
+    color: #ccc;
+    float: right;
+    font-size: 25px;
+    color: white;
+}
+.closeButton:hover, .closeButton:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.menuBox {
+}
+
+
+
+.topMenu {
+      float: right; 
+      padding-top: 5px; 
+}
+
+.topMenuLi {
+    display: inline-block;
+    padding-right: 10px;
+    margin-bottom: 10px;
+    height: 10px;
+    font-size: 18px;
+    /* border: white 1px solid; */
+}
+.heroBox {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    height: 60vh;
+    /* border: 2px white solid; */
+
+}
+
+img {
+    width: 200px;
+    height: 200px;
+    background-color:white;
+    border: white solid 2px;
+}
+
+#smallHero {
+    margin: auto;
+}
+
+#smallHeroHeader {
+
+    font-size: 102px;
+   
+}
+
+#smallHeroP {
+    font-family: Courier New;
+    font-size: 32px;
+}
+
+#bigHero {
+    text-align: center;
+    margin: auto;   
+
+}
+
+#bigHeroHeader {
+    font-size: 40px;
+    color: white;
+    background-color: #ff7a6b;
+    padding: 3px 32px 3px 32px;
+    border-radius: 15px;
+}
+
+#bigHeroHeader2 {
+    font-size: 40px;
+    color: white;
+    background-color: #ff7a6b;
+    padding: 2px 60px 2px 60px;
+    border-radius: 15px;
+}
+
+#bigHeroHeader3 {
+    font-size: 40px;
+    color: white;
+    background-color: #ff7a6b;
+    padding: 2px 43px 2px 43px;
+    border-radius: 15px;
+}
+
+#workoutSelector {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 20rem;
+    height: 3rem;
+    background-color: white;
+    font-size: 24px;
+    color: grey;
+}
+
+.restSelector {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 20rem;
+    height: 3rem;
+    background-color: white;
+    font-size: 24px;
+    border-radius: 5px;
+}
+
+#weightInput {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 20rem;
+    height: 3rem;
+    font-size: 24px;   
+    text-align: center; 
+}
+
+.selectionBox {
+
+}
+
+.footerbox {
+
+}
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+
+    background-color:rgba(245, 66, 93,.80);
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 5px solid grey;
+    width: 50%; /* Could be more or less, depending on screen size */
+    height: 50%;
+    border-radius: 10px;
+  }
+
+  #logoButtons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-row-gap: 50px;
+    /* border: 1px black dashed; */
+
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+.logos {
+    width: 100px;
+    height: 100px;
+    border-radius: 4px;
+    box-shadow: 2px 2px black, .50em 0 .2em grey;
+} 
+
+.logos:hover {
+
+}
+
+.menuItems-photogallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-row-gap: 100px;
+    grid-column-gap: 80px ;
+    overflow: auto;
+    overflow-x: scroll;
+    width: 100vw;
+    /* display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 80px;
+    max-width: 100%; */
+}
+/* .menuItems-photogallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-row-gap: 50px;
+} */
+
+li {
+    list-style-type: none;
+}
+
+#logoTop {
+    height: 80px;
+    width: 80px;
+    background: rgba(0,0,0,0.01);
+    border: none;
+}
+
+/* @media screen and (min-width: 940px) {
+    .menuItems-photogallery {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-row-gap: 50px;
+        overflow: auto;
+        overflow-x: scroll;
+        width: 100vw;
+    }
+} */
+
+@media screen and (max-width: 960px) {
+    .menuItems-photogallery {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-row-gap: 50px;
+        overflow: auto;
+        overflow-x: scroll;
+        width: 100vw;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .menuItems-photogallery {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-row-gap: 50px;
+        overflow: auto;
+        overflow-x: scroll;
+        width: 100vw;
+    }
+}
+
