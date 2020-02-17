@@ -58,10 +58,8 @@ function getMenuItems(restaurantName) {
             if(menuItem.image != undefined) {
                 const menuItemElement = document.createElement(`li`);
                 menuItemElement.class = "photo";
-                // menuItemElement.innerHTML = test;
                 const img = document.createElement(`img`);
                 img.src = menuItem.image;
-                // img.id = menuItem.id;
                 img.value = menuItem.id;          
                 menuItemElement.append(img); 
                 list.appendChild(menuItemElement);
@@ -69,7 +67,7 @@ function getMenuItems(restaurantName) {
             }
         });        
     });
-//    console.log(uniqueMenuList);
+
     return uniqueMenuList;
 };
 
@@ -84,8 +82,10 @@ function getNutritionInfo(menuItemId) {
         const protein = document.createElement(`h3`);
         const carbs = document.createElement(`h3`);
         const exerciseTime = document.createElement(`h4`);
+        const exerciseImg = document.createElement(`img`);
+        exerciseImg.src = getActivity("casual walking").activity[2];
         const time = getTimeToBurnCalories(response.nutrition.calories, weight, getActivity("casual walking"));
-
+        
         calories.innerHTML = response.nutrition.calories + " kcals";
         fat.innerHTML = response.nutrition.fat + " of Fat";       
         protein.innerHTML = response.nutrition.protein + " of Protein";      
@@ -98,6 +98,7 @@ function getNutritionInfo(menuItemId) {
         modalInput.appendChild(protein);
         modalInput.appendChild(carbs);
         modalInput.appendChild(exerciseTime);
+        modalInput.appendChild(exerciseImg);
 
     });
     return nutritionInfo;
@@ -121,21 +122,44 @@ function convertLbToKg(weightInPounds) {
 function getActivity(exercise) {
     let activity = "unavailable";
     const activities = [
-        {activity: ["casual walking", 2]},
-        {activity: ["house cleaning", 3]},
-        {activity: ["moderate walking", 3.3]},
-        {activity: ["stair climbing", 4]},
-        {activity: ["casual bicycling", 4]},
-        {activity: ["dancing", 4.8]},
-        {activity: ["strenuous hiking", 6.5]},
-        {activity: ["kayaking", 6.5]},
-        {activity: ["moderate bicycling", 13]},
-        {activity: ["strenuous jogging", 11.2]},
-        {activity: ["casual swimming", 8]},
-        {activity: ["sexual activity", 5.8]},
-        {activity: ["playing basketball", 8]},
-        {activity: ["moderate jogging", 8.8]},
+        {activity: ["casual walking", 2, "images/walking.jpg"]},
+        {activity: ["house cleaning", 3, "images/cleaning.jpg"]},
+        {activity: ["moderate walking", 3.3, "images/walking.jpg"]},
+        {activity: ["stair climbing", 4, "images/stairs.jpg"]},
+        {activity: ["casual bicycling", 4, "images/bicycling.png"]},
+        {activity: ["dancing", 4.8, "images/dancing.jpg"]},
+        {activity: ["strenuous hiking", 6.5, "images/hiking.png"]},
+        {activity: ["kayaking", 6.5, "images/kayaking.jpg"]},
+        {activity: ["moderate bicycling", 13, "images/fast-bicycling.png"]},
+        {activity: ["strenuous jogging", 11.2, "images/intense-jogging.png"]},
+        {activity: ["casual swimming", 8, "images/swimming.png"]},
+        {activity: ["sexual activity", 5.8, "images/kissing.jpg"]},
+        {activity: ["playing basketball", 8, "images/basketball.png"]},
+        {activity: ["moderate jogging", 8.8, "images/moderate-jogging.jpg"]},
     ];
+
+    const lightActivities = [
+        {activity: ["casual walking", 2, "images/walking.jpg"]},
+        {activity: ["house cleaning", 3, "images/cleaning.jpg"]},
+        {activity: ["moderate walking", 3.3, "images/walking.jpg"]}
+    ];
+
+    const moderateActivities = [
+        {activity: ["stair climbing", 4, "images/stairs.jpg"]},
+        {activity: ["casual bicycling", 4, "images/bicycling.png"]},
+        {activity: ["dancing", 4.8, "images/dancing.jpg"]},
+        {activity: ["sexual activity", 5.8, "images/kissing.jpg"]},
+        {activity: ["strenuous hiking", 6.5, "images/hiking.png"]},
+        {activity: ["kayaking", 6.5, "images/kayaking.jpg"]}
+    ];
+
+    const intenseActivities = [
+        {activity: ["moderate bicycling", 13, "images/fast-bicycling.png"]},
+        {activity: ["strenuous jogging", 11.2, "images/intense-jogging.png"]},
+        {activity: ["casual swimming", 8, "images/swimming.png"]},
+        {activity: ["playing basketball", 8, "images/basketball.png"]},
+        {activity: ["moderate jogging", 8.8, "images/moderate-jogging.jpg"]},
+    ]
 
     activities.forEach(movement => {
         if(movement.activity[0] === exercise) {
