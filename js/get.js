@@ -1,4 +1,4 @@
-`use strick`;
+`use strict`;
 
 function get(url) {
     return fetch(url)
@@ -12,20 +12,3 @@ function get(url) {
         return error;
     });
 }
-
-
-
-
-
-
-
-
-
-
-
-// // const get = function(url){
-//     return fetch history(url)
-//     .then(response => response.json())
-//     .then(data => data);
-// // }
-//(someArgunments) => {someFunctionReturn() }

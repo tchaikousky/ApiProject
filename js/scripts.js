@@ -1,50 +1,62 @@
 `use scrict`;
 
-const apiKey = `f218c55bc041494885c415afbc00faaa`
-const restuarants = [];
-
-function getRestaurant(restaurantName) {
-    
-    
-}
-
-function getMenuItems() {
-    const apiUrl = `https://api.spoonacular.com/food/menuItems/search?query=Hooters&number=60&apiKey=f218c55bc041494885c415afbc00faaa`;
-    
-    const l = get(apiUrl).then(function(response) {
-        const restaurantMenuList = response.menuItems.filter(function(menuItem) {
-            console.log(response.menuItems[0].restaurantChain)
-            if(menuItem.restaurantChain === "Hooters") {
-                return menuItem
-            }
-        });
-        console.log(restaurantMenuList);
-        // console.log(restaurantList);
-        // console.log(response.value);
-        return restaurantMenuList;
-    });
-
-    return l;
-
-}
-
-function getNutritionInfo(restaurantChain) {
-    // get(apiUrl).then(function(response) {
-    //     const menuItemId = 
-}
-
-function getSingleMenuItem(itemName) {
-    const menuItemId = 0;
-    restaurantMenu.forEach(menuItem => {
-        if(menuItem.title === itemName) {
-            menuItemId = menuItem.id;
-        }
-    });
-    return menuItemId;
-}
+const btn = document.getElementById("myBtn");
+const closeModalButton = document.getElementsByClassName("close")[0];
+const logos = document.getElementById("logoButtons");
 
 
-// console.log(getSingleMenuItem("Caesar Salad"));
-console.log(getMenuItems());
+document.cookie = "";
 
-// /search?query=${restuarantName}&number=60&apiKey=${apiKey}
+btn.addEventListener("click", function(e) {
+    const weight = document.getElementById("weightInput");
+    const exerciseInput = document.querySelector(`#workoutSelector`);
+    const modal = document.getElementById("myModal");
+    sessionStorage.weight = weight.value;
+    sessionStorage.exerciseInput = exerciseInput.value;
+
+    modal.style.display = "block";
+    console.log(document.cookie);
+});
+
+closeModalButton.addEventListener("click", function(e) {
+    const modal = document.getElementById("myModal");
+    modal.style.display = "none";
+});
+
+logos.addEventListener("click", function(e){
+    document.cookie = e.target.value;
+    if (e.target.value != undefined) {
+        location.assign(`page2.html`);
+        // if(e.target.value === "Burger King") {
+        //     location.assign(`page2.html`);
+        // }
+        // else if(e.target.value === "Carl's Jr") {
+        //     location.assign("page2.html");
+        // }
+        // else if(e.target.value === "Hooter's") {
+        //     location.assign("page2.html");
+        // }
+        // else if(e.target.value === "Jack In The Box") {
+        //     location.assign("page2.html");
+        // }
+        // else if(e.target.value === "Sonic") {
+        //     location.assign("page2.html");
+        // }
+        // else if(e.target.value === "Wendy's") {
+        //     location.assign("page2.html");
+        // }
+        // else if(e.target.value === "McDonald's") {
+        //     location.assign("page2.html");
+        // }
+        // else if(e.target.value === "Bojangles") {
+        //     location.assign("page2.html");
+        // }   
+    }
+    return e.target.value;   
+});
+
+// console.log(getNutritionInfo(419330));
+// console.log(getCaloriesBurned(60, 215, getActivity("casual walking")));
+// console.log(getActivity("house cleaning"));
+// console.log(convertLbToKg(215));
+// console.log(getTimeToBurnCalories(205, 215, getActivity("casual walking")));

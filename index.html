@@ -6,15 +6,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Exercise Generator</title>
         <link rel="stylesheet" href="css/styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
         <main>      
             <div class="menuBox">
                 <img src="images/logo.png" id="logoTop"/>
-                <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Contact</li>
+                <ul class="topMenu">
+                    <li class="topMenuLi"><a href="index.html">Home</a></li>
+                    <li class="topMenuLi"><a href="https://github.com/alanbjordan/ApiProject">About</a></li>
+                    <li class="topMenuLi">Contact</li>
                 </ul>
             </div>  
             <div class="heroBox">
@@ -34,63 +35,28 @@
                     <span id="bigHeroHeader3">Where Did You Eat?</span><br>
                     <button type="button" class="restSelector" id="myBtn">Select Restaurant</button><br>
                     <div id="myModal" class="modal">
-                                                <!-- Modal content -->
                     <div class="modal-content">
                         <span class="close">&times;</span>
                         <div id="logoButtons">
-                        <input type="image" src="images/burgerking.png" class="logos" id="burgerKing" value="Burger King"> 
-                        <input type="image" src="images/calrsjr.jpg" class="logos" id="carlsJr" value="Carl's Jr"> 
-                        <input type="image" src="images/hooters.jpg" class="logos" id="hooters" value="Hooter's">
-                        <input type="image" src="images/jackinthebox.jpg" class="logos" id="jackInTheBox" value="Jack In The Box">
-                        <input type="image" src="images/sonic.jpg" class="logos" id="sonic" value="Sonic">
-                        <input type="image" src="images/wendys.jpg" class="logos" id="wendys" value="Wendy's">
-                        <input type="image" src="images/mcdonalds.png" class="logos" id="mcdonalds" value="McDonald's">
-                        <input type="image" src="images/bojangles.png" class="logos" id="bojangles" value="Bojangles">
+                            <input type="image" src="images/burgerking.png" class="logos" id="burgerKing" value="Burger King"> 
+                            <input type="image" src="images/hooters.jpg" class="logos" id="hooters" value="Hooters">
+                            <input type="image" src="images/tacobell.jpg" class="logos" id="tacobell" value="Taco Bell">
+                            <input type="image" src="images/jackinthebox.jpg" class="logos" id="jackInTheBox" value="Jack in the Box">
+                            <input type="image" src="images/sonic.jpg" class="logos" id="sonic" value="Sonic">
+                            <input type="image" src="images/bojangles.png" class="logos" id="bojangles" value="Bojangles">
+                            <input type="image" src="images/wendys.jpg" class="logos" id="wendys" value="Wendy's">
+                            <input type="image" src="images/calrsjr.jpg" class="logos" id="carlsJr" value="Carl's Jr"> 
+                            <input type="image" src="images/mcdonalds.png" class="logos" id="mcdonalds" value="McDonald's">
+                            <input type="image" src="images/starbucks.jpg" class="logos" id="burgerKing" value="Starbucks"> 
+                            <input type="image" src="images/chick.png" class="logos" id="chick-fil-A" value="Chick-fil-A">
+                            <input type="image" src="images/KFC.png" class="logos" id="kfc" value="KFC">
+                        
                         </div>
                     </div>
                 </div>
             </div>
         </main>
-        
     </body>
-    <script>
-
-
-                // Get the modal
-        var modal = document.getElementById("myModal");
-
-        // Get the button that opens the modal
-        var btn = document.getElementById("myBtn");
-
-        // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName("close")[0];
-
-        //Get the id of the image clicked
-        var logos = document.getElementById("logoButtons");
-    
-        // When the user clicks on the button, open the modal
-        btn.onclick = function() {
-        modal.style.display = "block";
-        }
-
-        // When the user clicks on <span> (x), close the modal
-        span.onclick = function() {
-        modal.style.display = "none";
-        }
-
-        //When the user clicks on a logo, close the modal and update restaurant information
-        logos.onclick = function(e) {
-        modal.style.display = "none";
-            if (e.target.value != undefined) {
-                document.getElementById("myBtn").innerHTML = e.target.value;
-            }
-        }
-
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-        }
-    </script>
+    <script src = "js/get.js"></script>
+    <script src = "js/scripts.js"></script>
 </html>
