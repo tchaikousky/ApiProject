@@ -1,40 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Sample Modal and Photo Gallery Layout</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Sample Modal and Photo Gallery Layout</title>
         <link rel="stylesheet" href="css/page_2_styles.css">
     </head>
     <body>
         <div class="wrapper">
-            <ul class="menuItems-photogallery">
-                <li class="photo">
-                    <img src="images/Big_Mac.jpg"/>
-                </li>
-                <li class="photo">
-                    <img src="images/Chicken_McNuggets.jpg"/>
-                </li>
-                <li class="photo">
-                    <img src="images/Cheeseburger.jpg"/>
-                </li>
-                <li class="photo">
-                    <img src="images/Quarter_Pounder.jpg"/>
-                </li>
-                <li class="photo">
-                    <img src="images/Double_Cheeseburger.jpg"/>
-                </li>
-                <li class="photo">
-                    <img src="images/Double_Quarter_Pounder.jpg"/>
-                </li>
-                <li class="photo">
-                    <img src="images/McChicken.jpg"/>
-                </li>
-                <li class="photo">
-                    <img src="images/Filet-O-Fish.jpeg"/>
-                </li>
+            <ul class="menuItems-photogallery"  id="menuItems">
+                
             </ul>
+            <div id="simpleModal" class="modal">
+                <div class="modalContent">
+                    <div class="modalHeader">
+                        <span class="closeButton">&times;</span>
+                        <h3>Ok.... so here's the deal.</h3>
+                    </div>
+                    <div class="modalBody" id="bodyOfModal">
+                        
+                    </div>
+                    <div class="modalFooter">
+                        <h3></h3>
+                    </div>
+                </div>
+            </div>
         </div>
+        <script src="js/get.js"></script>
+        <script src="js/page2_scripts.js"></script>     
     </body>
 </html>
     
