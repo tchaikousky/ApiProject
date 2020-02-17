@@ -65,6 +65,7 @@ function getMenuItems(restaurantName) {
                 img.value = menuItem.id;          
                 menuItemElement.append(img); 
                 list.appendChild(menuItemElement);
+                console.log(uniqueMenuList);
             }
         });        
     });

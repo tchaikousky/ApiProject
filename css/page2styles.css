@@ -125,6 +125,7 @@ img {
     height: 200px;
     background-color:white;
     border: white solid 2px;
+    border-radius: 9px;
 }
 
 #smallHero {
