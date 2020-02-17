@@ -4,30 +4,49 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Sample Modal and Photo Gallery Layout</title>
-        <link rel="stylesheet" href="css/page_2_styles.css">
+        <link rel="stylesheet" href="css/page2styles.css">
     </head>
-    <body>
-        <div class="wrapper">
-            <ul class="menuItems-photogallery"  id="menuItems">
-                
+    <body>            
+        <div class="menuBox">
+            <img src="images/logo.png" id="logoTop"/>
+            <ul class="topMenu">
+                <li class="topMenuLi">Home</li>
+                <li class="topMenuLi">About</li>
+                <li class="topMenuLi">Contact</li>
             </ul>
-            <div id="simpleModal" class="modal">
-                <div class="modalContent">
-                    <div class="modalHeader">
-                        <span class="closeButton">&times;</span>
-                        <h3>Ok.... so here's the deal.</h3>
+        </div>  
+        <div class="heroBox">
+            <!-- <div class="wrapper"> -->
+                <ul class="menuItems-photogallery"  id="menuItems">   
+                </ul>
+                <div id="simpleModal" class="modal">
+                    <div class="modalContent">
+                        <div class="modalHeader">
+                            <span class="closeButton">&times;</span>
+                            <h3>Ok.... so here's the deal.</h3>
+                        </div>
+                        <div class="modalBody" id="bodyOfModal">
+                            <div id="modalBodyCalories">
+                                <h1 id="modalH1"></h1>
+                            </div>
+                            <div id="modalBodyNutrients">
+
+                            </div>
+                            <div id="modalBodyImages">
+                                <br>
+                                <label id="imageLabel"></label>
+                            </div>
+                        </div>
+                        <div class="modalFooter">
+                            <h3></h3>
+                        </div>
                     </div>
-                    <div class="modalBody" id="bodyOfModal">
-                        
-                    </div>
-                    <div class="modalFooter">
-                        <h3></h3>
-                    </div>
-                </div>
+                <!-- </div> -->
             </div>
         </div>
         <script src="js/get.js"></script>
         <script src="js/page2_scripts.js"></script>     
+    
     </body>
 </html>
     

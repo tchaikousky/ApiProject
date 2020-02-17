@@ -3,6 +3,7 @@
 const apiKey = `f218c55bc041494885c415afbc00faaa`;
 const apiKey2 = `29a682eb66a84deba3ba0a5a29686c19`;
 const apiKey3 = `HMCo478fzi4fDwuGYUzgueKiWkkP1apcec2DE3qR`;
+const apiKey4 = `3d088638092c4eed99786c1484469e95`
 const target = document.cookie;
 const menu = document.getElementById("menuItems");
 const closeModalButton = document.getElementsByClassName("closeButton")[0];
@@ -32,7 +33,7 @@ modal.addEventListener("click", function(e) {
 });
 
 function getMenuItems(restaurantName) {
-    const apiUrl = `https://api.spoonacular.com/food/menuItems/search?query=${restaurantName}&number=150&apiKey=${apiKey2}`;
+    const apiUrl = `https://api.spoonacular.com/food/menuItems/search?query=${restaurantName}&number=150&apiKey=${apiKey4}`;
     const restaurantMenuList = [];
     const uniqueMenuList = [];
     const list = document.querySelector(`.menuItems-photogallery`);
@@ -62,6 +63,7 @@ function getMenuItems(restaurantName) {
                 img.value = menuItem.id;          
                 menuItemElement.append(img); 
                 list.appendChild(menuItemElement);
+                console.log(uniqueMenuList);
             }
         });        
     });
@@ -70,32 +72,28 @@ function getMenuItems(restaurantName) {
 };
 
 function getNutritionInfo(menuItemId) {
-    const apiUrl = `https://api.spoonacular.com/food/menuItems/${menuItemId}?query=nutrition&apiKey=${apiKey2}`;
+    const apiUrl = `https://api.spoonacular.com/food/menuItems/${menuItemId}?query=nutrition&apiKey=${apiKey4}`;
     const nutritionInfo = [];
     const modalInput = document.getElementById("bodyOfModal");    
 
     get(apiUrl).then(function(response) {
-        const calories = document.createElement(`h1`);
-        const fat = document.createElement(`h3`);
-        const protein = document.createElement(`h3`);
-        const carbs = document.createElement(`h3`);
+        const calories = document.querySelector(`#modalH1`);
+        const modalBodyNutrients = document.querySelector(`#modalBodyNutrients`);
+        const modalBodyImages = document.querySelector(`#modalBodyImages`);
+        const imageLabel = document.querySelector(`#imageLabel`);
         const exerciseTime = document.createElement(`h4`);
         const exerciseImg = document.createElement(`img`);
         exerciseImg.src = getActivity("casual walking").activity[2];
         const time = getTimeToBurnCalories(response.nutrition.calories, weight, getActivity("casual walking"));
         
         calories.innerHTML = response.nutrition.calories + " kcals";
-        fat.innerHTML = response.nutrition.fat + " of Fat";       
-        protein.innerHTML = response.nutrition.protein + " of Protein";      
-        carbs.innerHTML = response.nutrition.carbs + " of Carbs";
+        modalBodyNutrients.innerHTML.append(response.nutrition.fat + " of Fat");       
+        modalBodyNutrients.innerHTML.append(response.nutrition.protein + " of Protein");      
+        modalBodyNutrients.innerHTML.append(response.nutrition.carbs + " of Carbs");
         // need to change
         exerciseTime.innerHTML = parseInt((time)/60) + " hrs " + (parseInt(time)%60) + " mins";
-
-        modalInput.appendChild(calories);
-        modalInput.appendChild(fat);
-        modalInput.appendChild(protein);
-        modalInput.appendChild(carbs);
-        modalInput.appendChild(exerciseTime);
+        modalBodyImages.appendChild(exerciseImg);
+        imageLabel.appendChild(exerciseTime);
         modalInput.appendChild(exerciseImg);
 
     });
