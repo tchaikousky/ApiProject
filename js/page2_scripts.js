@@ -67,7 +67,7 @@ function getMenuItems(restaurantName) {
                 menuItemElement.append(img);
                 menuItemLabel.innerHTML = menuItem.title; 
                 list.appendChild(menuItemElement);
-                list.appendChild(menuItemLabel);
+                menuItemElement.appendChild(menuItemLabel);
             }
         });        
     });
@@ -102,13 +102,8 @@ function getNutritionInfo(menuItemId) {
             imageDiv.appendChild(exerciseImg);
             // imageDiv.appendChild(breakPoint);
             imageDiv.appendChild(imageLabel);
-<<<<<<< HEAD
             // imageDiv.appendChild(exerciseTime);
             imageLabel.innerHTML = exercise.activity[0] + " : " + parseInt((time)/60) + " hrs " + (parseInt(time)%60) + " mins";
-=======
-            imageDiv.appendChild(exerciseTime);
-            imageLabel.innerHTML = exercise.activity[0] + " : " + time;
->>>>>>> 67744798175a15dad5f50cfb6d99b8d91a87945d
             
             modalBodyImages.appendChild(imageDiv); 
         });
