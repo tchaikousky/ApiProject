@@ -8,14 +8,20 @@ const logos = document.getElementById("logoButtons");
 document.cookie = "";
 
 btn.addEventListener("click", function(e) {
+    const weightCheck = document.getElementById("weightInput").value;
     const weight = document.getElementById("weightInput");
-    const exerciseInput = document.querySelector(`#workoutSelector`);
-    const modal = document.getElementById("myModal");
-    sessionStorage.weight = weight.value;
-    sessionStorage.exerciseInput = exerciseInput.value;
+    if(weightCheck.trim() === "" ) {
+        alert("'Weight' is a required field!");
+        
+    } else {
+        const exerciseInput = document.querySelector(`#workoutSelector`);
+        const modal = document.getElementById("myModal");
+        sessionStorage.weight = parseInt(weight.value);
+        sessionStorage.exerciseInput = exerciseInput.value;
 
-    modal.style.display = "block";
-    console.log(document.cookie);
+        modal.style.display = "block";
+        console.log(document.cookie);
+    }
 });
 
 closeModalButton.addEventListener("click", function(e) {
