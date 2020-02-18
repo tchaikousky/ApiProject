@@ -13,6 +13,14 @@ div {
     /* border: dashed black 4px; */
 }
 
+a {
+    color: white;
+}
+
+a:link {
+    text-decoration: none;
+}
+
 main {
 height: 100%;
 width: 90%;
