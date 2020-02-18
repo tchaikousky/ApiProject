@@ -94,6 +94,21 @@ grid-template-rows: 1fr 6fr 1fr 2fr;
     cursor: pointer;
 }
 
+#modalH1 {
+    text-align: center;
+    font-size: 5rem;
+}
+
+p {
+    font-size: 2rem;
+}
+
+#modalBodyImages {
+    border: 1px black solid;
+    display: grid;
+    /* grid-template-columns: 50% 50%; */
+}
+
 .menuBox {
 }
 

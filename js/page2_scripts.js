@@ -34,7 +34,7 @@ modal.addEventListener("click", function(e) {
 });
 
 function getMenuItems(restaurantName) {
-    const apiUrl = `https://api.spoonacular.com/food/menuItems/search?query=${restaurantName}&number=150&apiKey=${apiKey4}`;
+    const apiUrl = `https://api.spoonacular.com/food/menuItems/search?query=${restaurantName}&number=150&apiKey=${apiKey}`;
     const restaurantMenuList = [];
     const uniqueMenuList = [];
     const list = document.querySelector(`.menuItems-photogallery`);
@@ -72,7 +72,7 @@ function getMenuItems(restaurantName) {
 };
 
 function getNutritionInfo(menuItemId) {
-    const apiUrl = `https://api.spoonacular.com/food/menuItems/${menuItemId}?query=nutrition&apiKey=${apiKey4}`;
+    const apiUrl = `https://api.spoonacular.com/food/menuItems/${menuItemId}?query=nutrition&apiKey=${apiKey}`;
     const nutritionInfo = [];
     let exercises = getActivity(exerciseInput);    
 
