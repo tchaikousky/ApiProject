@@ -34,7 +34,7 @@ modal.addEventListener("click", function(e) {
 });
 
 function getMenuItems(restaurantName) {
-    const apiUrl = `https://api.spoonacular.com/food/menuItems/search?query=${restaurantName}&number=150&apiKey=${apiKey}`;
+    const apiUrl = `https://api.spoonacular.com/food/menuItems/search?query=${restaurantName}&number=150&apiKey=${apiKey2}`;
     const restaurantMenuList = [];
     const uniqueMenuList = [];
     const list = document.querySelector(`.menuItems-photogallery`);
@@ -58,12 +58,16 @@ function getMenuItems(restaurantName) {
         uniqueMenuList.forEach(menuItem => {
             if(menuItem.image != undefined) {
                 const menuItemElement = document.createElement(`li`);
+                const menuItemLabel = document.createElement(`p`);
                 menuItemElement.class = "photo";
+                menuItemLabel.id = "menuItemLabel"
                 const img = document.createElement(`img`);
                 img.src = menuItem.image;
                 img.value = menuItem.id;          
-                menuItemElement.append(img); 
+                menuItemElement.append(img);
+                menuItemLabel.innerHTML = menuItem.title; 
                 list.appendChild(menuItemElement);
+                list.appendChild(menuItemLabel);
             }
         });        
     });
@@ -72,7 +76,7 @@ function getMenuItems(restaurantName) {
 };
 
 function getNutritionInfo(menuItemId) {
-    const apiUrl = `https://api.spoonacular.com/food/menuItems/${menuItemId}?query=nutrition&apiKey=${apiKey}`;
+    const apiUrl = `https://api.spoonacular.com/food/menuItems/${menuItemId}?query=nutrition&apiKey=${apiKey2}`;
     const nutritionInfo = [];
     let exercises = getActivity(exerciseInput);    
 
@@ -98,8 +102,13 @@ function getNutritionInfo(menuItemId) {
             imageDiv.appendChild(exerciseImg);
             // imageDiv.appendChild(breakPoint);
             imageDiv.appendChild(imageLabel);
+<<<<<<< HEAD
             // imageDiv.appendChild(exerciseTime);
             imageLabel.innerHTML = exercise.activity[0] + " : " + parseInt((time)/60) + " hrs " + (parseInt(time)%60) + " mins";
+=======
+            imageDiv.appendChild(exerciseTime);
+            imageLabel.innerHTML = exercise.activity[0] + " : " + time;
+>>>>>>> 67744798175a15dad5f50cfb6d99b8d91a87945d
             
             modalBodyImages.appendChild(imageDiv); 
         });
