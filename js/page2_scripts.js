@@ -34,7 +34,7 @@ modal.addEventListener("click", function(e) {
 });
 
 function getMenuItems(restaurantName) {
-    const apiUrl = `https://api.spoonacular.com/food/menuItems/search?query=${restaurantName}&number=150&apiKey=${apiKey4}`;
+    const apiUrl = `https://api.spoonacular.com/food/menuItems/search?query=${restaurantName}&number=150&apiKey=${apiKey}`;
     const restaurantMenuList = [];
     const uniqueMenuList = [];
     const list = document.querySelector(`.menuItems-photogallery`);
@@ -72,7 +72,7 @@ function getMenuItems(restaurantName) {
 };
 
 function getNutritionInfo(menuItemId) {
-    const apiUrl = `https://api.spoonacular.com/food/menuItems/${menuItemId}?query=nutrition&apiKey=${apiKey4}`;
+    const apiUrl = `https://api.spoonacular.com/food/menuItems/${menuItemId}?query=nutrition&apiKey=${apiKey}`;
     const nutritionInfo = [];
     let exercises = getActivity(exerciseInput);    
 
@@ -84,19 +84,21 @@ function getNutritionInfo(menuItemId) {
         const modalBodyImages = document.querySelector(`#modalBodyImages`);
         
         exercises.forEach(exercise => {
+            const imageDiv = document.createElement(`div`);
             const imageLabel = document.createElement(`label`);
             const exerciseTime = document.createElement(`h4`);
             const exerciseImg = document.createElement(`img`);
-
+            imageDiv.class = "imageClass";
             imageLabel.id = "imageLabel";
             exerciseImg.src = exercise.activity[2];
             const time = parseInt(getTimeToBurnCalories(response.nutrition.calories, weight, exercise));
             console.log(time);
             exerciseTime.innerHTML = parseInt((time)/60) + " hrs " + (parseInt(time)%60) + " mins";
-            modalBodyImages.appendChild(exerciseTime);
-            modalBodyImages.appendChild(exerciseImg);
+            imageDiv.appendChild(exerciseTime);
+            imageDiv.appendChild(exerciseImg);
             imageLabel.innerHTML = exercise.activity[0];
-            modalBodyImages.appendChild(imageLabel); 
+            imageDiv.appendChild(imageLabel);
+            modalBodyImages.appendChild(imageDiv); 
         });
         
         calories.innerHTML = response.nutrition.calories + " kcals";
