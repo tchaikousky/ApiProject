@@ -84,19 +84,22 @@ function getNutritionInfo(menuItemId) {
         const modalBodyImages = document.querySelector(`#modalBodyImages`);
         
         exercises.forEach(exercise => {
+            const imageDiv = document.createElement(`div`);
             const imageLabel = document.createElement(`label`);
             const exerciseTime = document.createElement(`h4`);
             const exerciseImg = document.createElement(`img`);
-
+            imageDiv.class = "imageClass";
             imageLabel.id = "imageLabel";
             exerciseImg.src = exercise.activity[2];
             const time = parseInt(getTimeToBurnCalories(response.nutrition.calories, weight, exercise));
             console.log(time);
             exerciseTime.innerHTML = parseInt((time)/60) + " hrs " + (parseInt(time)%60) + " mins";
-            modalBodyImages.appendChild(exerciseTime);
-            modalBodyImages.appendChild(exerciseImg);
+            imageDiv.appendChild(exerciseImg);
+            imageDiv.appendChild(imageLabel);
+            imageDiv.appendChild(exerciseTime);
             imageLabel.innerHTML = exercise.activity[0];
-            modalBodyImages.appendChild(imageLabel); 
+            
+            modalBodyImages.appendChild(imageDiv); 
         });
         
         calories.innerHTML = response.nutrition.calories + " kcals";
