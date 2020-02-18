@@ -82,11 +82,12 @@ function getNutritionInfo(menuItemId) {
         const modalBodyNutrientsProtein = document.getElementById(`modalBodyNutrientsProtein`);
         const modalBodyNutrientsCarbs = document.getElementById(`modalBodyNutrientsCarbs`);
         const modalBodyImages = document.querySelector(`#modalBodyImages`);
+        // const breakPoint = document.createElement(`p`);
         
         exercises.forEach(exercise => {
             const imageDiv = document.createElement(`div`);
-            const imageLabel = document.createElement(`label`);
-            const exerciseTime = document.createElement(`h4`);
+            const imageLabel = document.createElement(`p`);
+            const exerciseTime = document.createElement(`p`);
             const exerciseImg = document.createElement(`img`);
             imageDiv.class = "imageClass";
             imageLabel.id = "imageLabel";
@@ -95,9 +96,10 @@ function getNutritionInfo(menuItemId) {
             console.log(time);
             exerciseTime.innerHTML = parseInt((time)/60) + " hrs " + (parseInt(time)%60) + " mins";
             imageDiv.appendChild(exerciseImg);
+            // imageDiv.appendChild(breakPoint);
             imageDiv.appendChild(imageLabel);
-            imageDiv.appendChild(exerciseTime);
-            imageLabel.innerHTML = exercise.activity[0];
+            // imageDiv.appendChild(exerciseTime);
+            imageLabel.innerHTML = exercise.activity[0] + " : " + parseInt((time)/60) + " hrs " + (parseInt(time)%60) + " mins";
             
             modalBodyImages.appendChild(imageDiv); 
         });

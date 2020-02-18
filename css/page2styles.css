@@ -69,6 +69,8 @@ grid-template-rows: 1fr 6fr 1fr 2fr;
     padding: 2px;
     color: #fff;
     text-align: center;
+    border-radius: 10px;
+    text-transform: capitalize;
 }
 .modalBody {
     padding: 10px 20px;
@@ -97,16 +99,44 @@ grid-template-rows: 1fr 6fr 1fr 2fr;
 #modalH1 {
     text-align: center;
     font-size: 5rem;
+    color: coral;
+    box-shadow: black 1px;
 }
 
 p {
     font-size: 2rem;
 }
 
-#modalBodyImages {
-    border: 1px black solid;
+/* #imageParent {
     display: grid;
-    /* grid-template-columns: 50% 50%; */
+    grid-template-columns: 1fr;
+    border: 1px black solid;
+    margin: 5px;
+    padding: 30px;
+} */
+
+#modalBodyImages {
+    /* border: 1px black solid; */
+    /* display: grid;
+    padding-right: 100px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 40px; */
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    text-transform: capitalize;
+    
+    /* align-items: left; */
+
+}
+
+#imageLabel {
+    font-size: 1rem;
+}
+
+.imageClass {
+    border: 1px solid black;
 }
 
 .menuBox {
@@ -332,7 +362,7 @@ li {
         grid-template-columns: 1fr 1fr 1fr;
         grid-row-gap: 50px;
         overflow: auto;
-        overflow-x: scroll;
+        overflow-x: auto;
         width: 100vw;
     }
 }
