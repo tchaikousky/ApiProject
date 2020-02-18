@@ -94,10 +94,11 @@ function getNutritionInfo(menuItemId) {
             const time = parseInt(getTimeToBurnCalories(response.nutrition.calories, weight, exercise));
             console.log(time);
             exerciseTime.innerHTML = parseInt((time)/60) + " hrs " + (parseInt(time)%60) + " mins";
-            imageDiv.appendChild(exerciseTime);
             imageDiv.appendChild(exerciseImg);
-            imageLabel.innerHTML = exercise.activity[0];
             imageDiv.appendChild(imageLabel);
+            imageDiv.appendChild(exerciseTime);
+            imageLabel.innerHTML = exercise.activity[0];
+            
             modalBodyImages.appendChild(imageDiv); 
         });
         
