@@ -97,7 +97,7 @@ function getNutritionInfo(menuItemId) {
             imageDiv.appendChild(exerciseImg);
             imageDiv.appendChild(imageLabel);
             imageDiv.appendChild(exerciseTime);
-            imageLabel.innerHTML = exercise.activity[0];
+            imageLabel.innerHTML = exercise.activity[0] + " : " + time;
             
             modalBodyImages.appendChild(imageDiv); 
         });
