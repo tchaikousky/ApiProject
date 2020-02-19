@@ -13,6 +13,10 @@ div {
     /* border: dashed black 4px; */
 }
 
+h1 {
+    text-align: center;
+}
+
 a {
     color: white;
 }
@@ -20,15 +24,10 @@ a {
 a:link {
     text-decoration: none;
 }
-
 main {
-height: 100%;
-width: 90%;
-margin: auto;
-display: grid;
-grid-template-columns: 1fr;
-grid-template-rows: 1fr 6fr 1fr 2fr;
-
+    height: 100%;
+    width: 90%;
+    margin: auto;
 }
 
 .button {
@@ -178,7 +177,7 @@ p {
     display: grid;
     grid-template-columns: 30% 70%;
     height: 60vh;
-    border: 2px white solid;
+    /* border: 2px white solid; */
 
 }
 
@@ -377,7 +376,7 @@ li {
     .menuItems-photogallery {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-row-gap: 50px;
+        grid-row-gap: 30px;
         overflow: auto;
         overflow-x: auto;
         width: 100vw;
@@ -388,7 +387,7 @@ li {
     .menuItems-photogallery {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-row-gap: 50px;
+        grid-row-gap: 30px;
         overflow: auto;
         overflow-x: hidden;
         width: 90vw;

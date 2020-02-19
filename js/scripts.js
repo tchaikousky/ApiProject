@@ -11,7 +11,8 @@ btn.addEventListener("click", function(e) {
     const weightCheck = document.getElementById("weightInput").value;
     const weight = document.getElementById("weightInput");
     if(weightCheck.trim() === "" ) {
-        alert("'Weight' is a required field!");
+        const alertArea = document.getElementById(`alertArea`);
+        alertArea.innerHTML = "You must enter your weight"
         
     } else {
         const exerciseInput = document.querySelector(`#workoutSelector`);
