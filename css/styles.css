@@ -44,8 +44,19 @@ li {
     margin-bottom: 10px;
     height: 10px;
     font-size: 18px;
+    text-decoration: nonoe
+    ;
     /* border: white 1px solid; */
 }
+
+a {
+    color: white;
+}
+
+a:link {
+    text-decoration: none;
+}
+
 .heroBox {
     display: grid;
     grid-template-columns: 30% 70%;
@@ -159,14 +170,16 @@ li {
     overflow: hidden;
     overflow-y: scroll;
     border-radius: 10px;
-    
-    
+    overflow: hidden;
+    overflow-y: scroll;
+ 
   }
 
   #logoButtons {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-row-gap: 50px;
+
     /* border: 1px black dashed; */
 
   }
@@ -198,7 +211,24 @@ li {
 
 }
 
-@media screen and (max-width: 800px) {
-
+@media screen and (max-width: 960px) {
+    #logoButtons {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-row-gap: 50px;
     
+        /* border: 1px black dashed; */
+    
+      }
+    }
+
+@media screen and (max-width: 670px) {
+    #logoButtons {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-row-gap: 50px;
+    
+        /* border: 1px black dashed; */
+    
+      }
 }
