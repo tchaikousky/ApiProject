@@ -20,7 +20,6 @@ btn.addEventListener("click", function(e) {
         sessionStorage.exerciseInput = exerciseInput.value;
 
         modal.style.display = "block";
-        console.log(document.cookie);
     }
 });
 

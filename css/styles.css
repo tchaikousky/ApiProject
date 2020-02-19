@@ -160,7 +160,6 @@ a:link {
   
   /* Modal Content/Box */
   .modal-content {
-
     background-color:rgba(245, 66, 93,.80);
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;

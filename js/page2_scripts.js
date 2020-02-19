@@ -9,7 +9,6 @@ const menu = document.getElementById("menuItems");
 const closeModalButton = document.getElementsByClassName("closeButton")[0];
 const modal = document.getElementById("simpleModal");
 const weight = sessionStorage.weight;
-console.log(weight);
 const exerciseInput = sessionStorage.exerciseInput;
 
 menu.addEventListener("click", function(e) {
@@ -86,23 +85,20 @@ function getNutritionInfo(menuItemId) {
         const modalBodyNutrientsProtein = document.getElementById(`modalBodyNutrientsProtein`);
         const modalBodyNutrientsCarbs = document.getElementById(`modalBodyNutrientsCarbs`);
         const modalBodyImages = document.querySelector(`#modalBodyImages`);
-        // const breakPoint = document.createElement(`p`);
         
         exercises.forEach(exercise => {
             const imageDiv = document.createElement(`div`);
             const imageLabel = document.createElement(`p`);
             const exerciseTime = document.createElement(`p`);
             const exerciseImg = document.createElement(`img`);
+            const time = parseInt(getTimeToBurnCalories(response.nutrition.calories, weight, exercise));
+
             imageDiv.class = "imageClass";
             imageLabel.id = "imageLabel";
             exerciseImg.src = exercise.activity[2];
-            const time = parseInt(getTimeToBurnCalories(response.nutrition.calories, weight, exercise));
-            console.log(time);
             exerciseTime.innerHTML = parseInt((time)/60) + " hrs " + (parseInt(time)%60) + " mins";
             imageDiv.appendChild(exerciseImg);
-            // imageDiv.appendChild(breakPoint);
             imageDiv.appendChild(imageLabel);
-            // imageDiv.appendChild(exerciseTime);
             imageLabel.innerHTML = exercise.activity[0] + " : " + parseInt((time)/60) + " hrs " + (parseInt(time)%60) + " mins";
             
             modalBodyImages.appendChild(imageDiv); 
@@ -120,8 +116,6 @@ function getNutritionInfo(menuItemId) {
 function getTimeToBurnCalories(calories, weightInKgs, exercise) {
     weightInKgs = convertLbToKg(weight);
     let secondNum = (exercise.activity[1]*3.5*weightInKgs)/200;
-    console.log(exercise.activity[1]);
-    console.log(weightInKgs);
     let time = calories / secondNum;
 
     return time;   
@@ -152,29 +146,6 @@ function getActivity(exercise) {
         {activity: ["playing basketball", 8, "images/basketball.png", "Intense Workout"]},
         {activity: ["moderate jogging", 8.8, "images/moderate-jogging.jpg", "Intense Workout"]},
     ];
-
-    // const lightActivities = [
-    //     {activity: ["casual walking", 2, "images/walking.jpg"]},
-    //     {activity: ["house cleaning", 3, "images/cleaning.jpg"]},
-    //     {activity: ["moderate walking", 3.3, "images/walking.jpg"]}
-    // ];
-
-    // const moderateActivities = [
-    //     {activity: ["stair climbing", 4, "images/stairs.jpg"]},
-    //     {activity: ["casual bicycling", 4, "images/bicycling.png"]},
-    //     {activity: ["dancing", 4.8, "images/dancing.jpg"]},
-    //     {activity: ["sexual activity", 5.8, "images/kissing.jpg"]},
-    //     {activity: ["strenuous hiking", 6.5, "images/hiking.png"]},
-    //     {activity: ["kayaking", 6.5, "images/kayaking.jpg"]}
-    // ];
-
-    // const intenseActivities = [
-    //     {activity: ["moderate bicycling", 13, "images/fast-bicycling.png"]},
-    //     {activity: ["strenuous jogging", 11.2, "images/intense-jogging.png"]},
-    //     {activity: ["casual swimming", 8, "images/swimming.png"]},
-    //     {activity: ["playing basketball", 8, "images/basketball.png"]},
-    //     {activity: ["moderate jogging", 8.8, "images/moderate-jogging.jpg"]},
-    // ]
     
     activities.forEach(movement => {
         if(movement.activity[3] === exercise) {
