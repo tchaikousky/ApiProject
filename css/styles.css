@@ -156,7 +156,11 @@ li {
     border: 5px solid grey;
     width: 50%; /* Could be more or less, depending on screen size */
     height: 50%;
+    overflow: hidden;
+    overflow-y: scroll;
     border-radius: 10px;
+    
+    
   }
 
   #logoButtons {
